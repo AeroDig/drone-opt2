@@ -59,7 +59,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Drone Optimizer</a>
+				<a class="navbar-brand" href="#">Multirotor Optimization Platform</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" role="form">
@@ -76,53 +76,9 @@
 		</div>
 	</nav>
 	<div class="container">
-		<drone-app>Loading...</drone-app>
+		<h1>Drone Optimizer</h1>
 	</div>
-	<div class="container">
-		<form role="form">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="form-group">
-						<label for="numProps">Number Of Props</label>
-						<input type="text" maxlength="1" size="4" id="numProps" placeholder="" class="form-control" />
-						<span class="help-block">Enter the number of propellers on the multirotor</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="form-group">
-						<label for="frameWeight"> Frame Weight</label>
-						<div class="input-group">
-							<span class="input-group-btn">
-								<input type="text" maxlength="6" size="10" id="frameWeight" placeholder="Kilograms" class="form-control" />
-							</span>
-							<span class="input-group-btn">
-								<select class="form-control">
-									<option value="kg">Kg</option>
-									<option value="lbs">Lbs</option>
-								</select>
-							</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="form-group">
-						<label for="altitude">Altitude</label>
-						<div class="input-group">
-							<span class="input-group-btn">
-						<input type="text" maxlength="6" size="6" id="altitude" class="form-control" />
-							</span>
-							<span class="input-group-btn">
-						<select class="form-control">
-							<option value="meters">meters</option>
-							<option value="ft">ft</option>
-						</select>
-						</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
+	<drone-app>Loading...</drone-app>
 	<div class="container">
 			<h3>Progress</h3>
 			<div class="progress">
@@ -140,7 +96,9 @@
 	<hr>
 
 	<footer>
-		<p>&copy; Company 2015</p>
+		<div class="container">
+			<p>&copy; Robobotics 2015</p>
+		</div>
 	</footer>
 	</div>
 	<!-- /container -->

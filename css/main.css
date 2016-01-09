@@ -4,7 +4,7 @@
    Author's custom styles
    ========================================================================== */
 
-form input[type=text] {
+drone-app form input[type=text] {
 	text-align: right;
 }
 
