@@ -1,0 +1,82 @@
+<form role="form">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<label for="units">Units</label>
+				<select class="form-control" ngControl="units" required
+								[(ngModel)]="model.unitSelected" (keyup)="onUnitChange($event)">
+					<option *ngFor="#set of unitSet" [value]="set">{{ set }}</option>
+				</select>
+				<span class="help-block">{{ model.unitSelected }}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="numProps">Number Of Props</label>
+					<input type="text" maxlength="1" id="numProps" class="form-control"
+								 [(ngModel)]="model.numProps" (keyup)="onPropChange($event)"
+					/>
+					<span class="help-block">{{ droneDescription }}</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="frameWeight">Frame Weight</label>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<input type="text" maxlength="6" id="frameWeight" class="form-control"
+										 [(ngModel)]="model.frameWeight"/>
+						</div>
+						<div class="input-group-btn">
+							<select class="form-control" required
+											[(ngModel)]="model.weightUnit" (keyup)="onWeightChange($event)">
+								<option *ngFor="#weight of unitsWeight" [value]="weight">{{ weight }}</option>
+							</select>
+						</div>
+					</div>
+					<span class="help-block">{{ calculatedWeightDisplay }}</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="altitude">Altitude</label>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<input type="text" maxlength="6" id="altitude" class="form-control"
+										 [(ngModel)]="model.altitude" (keyup)="onAltitudeChange($event)"
+							/>
+						</div>
+						<div class="input-group-btn">
+							<select class="form-control" required
+											[(ngModel)]="model.altitudeUnit" (keyup)="onAltitudeChange($event)">
+								<option *ngFor="#length of unitsLength" [value]="length">{{ length }}</option>
+							</select>
+						</div>
+					</div>
+					<span class="help-block">{{ calculatedAltitudeDisplay }}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="propDiameter">Propeller Characteristics</label>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<input type="text" maxlength="1" id="propDiameter" class="form-control" placeholder="Diameter"
+										 [(ngModel)]="model.propDiameter" (keyup)="onPropChange($event)"
+							/>
+						</div>
+					</div>
+					<span class="help-block">{{ propDescription }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-md-2">
+			{{ diagnostic }}
+		</div>
+	</div>
+</form>
